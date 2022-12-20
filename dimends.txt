@@ -1,0 +1,313 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+df=pd.DataFrame([[28,22,21,27],
+ [30,33,31,32],
+ [29,27,21,25],
+ [34,38,29,34],
+ [23,29,40,37],
+ [33,34,35,39],
+ [39,29,26,38],
+ [35,37,29,33],
+ [28,22,27,29],
+ [31,38,29,34]],
+ columns=['OS','SE','OOP','DS'])
+print(df)
+plt.scatter(df['OS'],df['SE'])
+plt.xlabel('SE')
+plt.ylabel('OS')
+plt.colorbar()
+plt.title('CSE Course')
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+df=pd.DataFrame([[28,22,21,27],
+ [30,33,31,32],
+ [29,27,21,25],
+ [34,38,29,34],
+ [23,29,40,37],
+ [33,34,35,39],
+ [39,29,26,38],
+ [35,37,29,33],
+ [28,22,27,29],
+ [31,38,29,34]],
+ columns=['OS','SE','OOP','DS'])
+print(df)
+plt.plot(df['OS'])
+plt.plot(df['SE'])
+plt.xlabel('SE')
+plt.ylabel('OS')
+plt.title('CSE Course')
+plt.show()
+
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+df=pd.DataFrame([[28,22,21,27],
+ [30,33,31,32],
+ [29,27,21,25],
+ [34,38,29,34],
+ [23,29,40,37],
+ [33,34,35,39],
+ [39,29,26,38],
+ [35,37,29,33],
+ [28,22,27,29],
+ [31,38,29,34]],
+ columns=['OS','SE','OOP','DS'])
+print(df)
+plt.bar(df['OS'],df['SE'])
+plt.xlabel('SE')
+plt.ylabel('OS')
+plt.title('CSE Course')
+plt.show()
+
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+df=pd.DataFrame([[28,22,21,27],
+ [30,33,31,32],
+ [29,27,21,25],
+ [34,38,29,34],
+ [23,29,40,37],
+ [33,34,35,39],
+ [39,29,26,38],
+ [35,37,29,33],
+ [28,22,27,29],
+ [31,38,29,34]],
+ columns=['OS','SE','OOP','DS'])
+print(df)
+plt.hist(df['OS'])
+plt.xlabel('SE')
+plt.ylabel('OS')
+plt.title('CSE Course')
+plt.show()
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+df=pd.DataFrame([[29,38,22],[26,23,33],[29,22,34]],columns=['OS','OOP','SE'])
+print(df)
+plt.boxplot(df)
+plt.show()
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+dataset = pd.read_csv("C:/Users/91988/Downloads/archive/diamonds.csv")
+print(dataset.head(5))
+plt.scatter(dataset['color'],dataset['carat'])
+plt.title('diamonds')
+plt.xlabel('color')
+plt.ylabel('carat')
+plt.show()
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+dataset = pd.read_csv("C:/Users/91988/Downloads/archive/diamonds.csv")
+print(dataset.head(5))
+plt.plot(dataset['color'],dataset['carat'])
+plt.title('diamonds')
+plt.xlabel('color')
+plt.ylabel('carat')
+plt.show()
+
+
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+dataset = pd.read_csv("C:/Users/91988/Downloads/archive/diamonds.csv")
+print(dataset.head(5))
+plt.bar(dataset['color'],dataset['carat'])
+plt.title('diamonds')
+plt.xlabel('color')
+plt.ylabel('carat')
+plt.show()
+
+
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+dataset = pd.read_csv("C:/Users/91988/Downloads/archive/diamonds.csv")
+print(dataset.head(5))
+plt.hist(dataset['carat'])
+plt.title('diamonds')
+plt.xlabel('color')
+plt.ylabel('carat')
+plt.show()
+
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+dataset = pd.read_csv("C:/Users/91988/Downloads/archive/diamonds.csv")
+#print(dataset.head(5))
+sns.lineplot(x='depth',y='color',data=dataset)
+plt.title('diamonds')
+plt.xlabel('depth')
+plt.ylabel('color')
+plt.show()
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+dataset = pd.read_csv("C:/Users/91988/Downloads/archive/diamonds.csv")
+#print(dataset.head(5))
+sns.scatterplot(x='depth',y='color',data=dataset)
+plt.title('diamonds')
+plt.xlabel('depth')
+plt.ylabel('color')
+plt.show()
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+dataset = pd.read_csv("C:/Users/91988/Downloads/archive/diamonds.csv")
+#print(dataset.head(5))
+sns.barplot(x='depth',y='color',data=dataset)
+plt.title('diamonds')
+plt.xlabel('depth')
+plt.ylabel('color')
+plt.show()
+
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+dataset = pd.read_csv("C:/Users/91988/Downloads/archive/diamonds.csv")
+#print(dataset.head(5))
+sns.histplot(x='depth',y='color',data=dataset)
+plt.title('diamonds')
+plt.xlabel('depth')
+plt.ylabel('color')
+plt.show()
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+dataset = pd.read_csv("C:/Users/91988/Downloads/archive/diamonds.csv")
+#print(dataset.head(5))
+sns.boxplot(x='depth',y='color',data=dataset)
+plt.title('diamonds')
+plt.xlabel('depth')
+plt.ylabel('color')
+plt.show()
+
+
+import numpy as pd
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+cars_df=pd.read_csv("C:/Users/91988/Downloads/archive (1)/Cars93.csv")
+cars_df.head((5))
+
+
+columns=["Manufacturer","Model","Type","Price","MPG.city","MPG.highway","Horsepower","Rear.seat.room","Passengers"]
+cars_df[columns].head()
+
+
+cars_df["Price"].plot(kind="box",figsize=(10,7))
+
+fig,(ax1,ax2)=plt.subplots(1,2)
+fig.set_figwidth(10)
+fig.set_figheight(7)
+ax1.boxplot(cars_df["Horsepower"])
+ax2.boxplot(cars_df["MPG.city"])
+ax1.set_title('Horsepower')
+ax1.set_xlabel('Horsepower')
+ax2.set_title('City Mileage')
+ax2.set_xlabel("City Mileage(in miles per US gallon)")
+fig.tight_layout()
+
+
+fig,ax=plt.subplots(2,3)
+fig.set_figwidth(10)
+fig.set_figheight(7)
+fig.suptitle("multiple box plots",fontsize=16)
+ax[0][0].boxplot(cars_df["Price"][cars_df["Type"]=="Compact"])
+ax[0][0].set_title('Compact')
+ax[0][1].boxplot(cars_df["Price"][cars_df["Type"]=="Large"])
+ax[0][1].set_title('Large')
+ax[0][2].boxplot(cars_df["Price"][cars_df["Type"]=="Midsize"])
+ax[0][2].set_title('Midsize')
+ax[1][0].boxplot(cars_df["Price"][cars_df["Type"]=="Small"])
+ax[1][0].set_title('small')
+ax[1][1].boxplot(cars_df["Price"][cars_df["Type"]=="Sporty"])
+ax[1][1].set_title('Sporty')
+ax[1][2].boxplot(cars_df["Price"][cars_df["Type"]=="Van"])
+ax[1][2].set_title('Van')
+
+
+ax=cars_df.plot(["Horsepower"],["MPG.city"],kind="scatter",color=
+"black",marker="*",figsize=(10,7))
+ax.set_xlabel("Horsepower")
+ax.set_ylabel("MPG.city")
+ax.set_title("Horsepower vs MPG.city",fontsize=16)
+
+
+fig =plt.figure()
+fig.set_figwidth(10)
+fig.set_figheight(7)
+cars_type_list=cars_df["Type"].unique()
+print("cars_type_list")
+colors_list=['red','blue','pink','black','green','yellow']
+for cars_type,colr in zip(cars_type_list,colors_list):
+x=cars_df[cars_df["Type"]==cars_type]["Horsepower"] y=cars_df[cars_df["Type"]==cars_type]["MPG.city"]
+plt.scatter(x,y,color=colr,label=cars_type)
+plt.suptitle("scatter plot of Horsepower and milage",fontsize=16)
+plt.xlabel("Horsepower")
+plt.ylabel("Milage city")
+plt.legend()
+
+
+fig=plt.figure()
+fig.set_figwidth(10)
+fig.set_figheight(7)
+plt.bar(cars_df["DriveTrain"], cars_df["MPG.city"],width=0.2,label="Mileage in city")
+plt.suptitle("DriveTrain vs MPG.city",fontsize=16)
+plt.xlabel("DriveTrain")
+plt.ylabel("MPG.city")
+plt.legend()
+
+plt.barh(cars_df["DriveTrain"], cars_df["MPG.city"],height=0.2,label="Mileage in city")
+plt.suptitle("DriveTrain vs MPG.city",fontsize=16)
+plt.xlabel("DriveTrain")
+plt.ylabel("MPG.city")
+plt.legend()
+
+cars_df["Passengers"].unique()
+
+cars_df["Type"].unique()
+
+grouped_data=cars_df[["Passengers","Type"]].groupby(by=["Passengers","Type"]).size()
+grouped_data
+
+grouped_data=cars_df[["Passengers","Type"]].groupby(by=["Passengers","Type"]).size().unstack()
+grouped_data
+
+grouped_data=cars_df[["Passengers","Type"]].groupby(by=["Passengers","Type"]).size().unstack().reset_index()
+grouped_data
+
+
+
+import matplotlib.cm as cm
+grouped_data.plot(x="Passengers",kind="bar",stacked=True,colormap=cm.Paired,figsize=(10,7))
